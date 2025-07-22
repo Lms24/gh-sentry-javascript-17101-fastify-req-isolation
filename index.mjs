@@ -14,6 +14,10 @@ app.get("/test-trace", (request, reply) => {
   );
 });
 
+app.get("/test-error", (request, reply) => {
+  throw new Error("test error");
+});
+
 const address = await app.listen({
   host: "::",
   port: 3000,
