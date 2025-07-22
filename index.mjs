@@ -4,7 +4,7 @@ import { getCurrentScope } from "@sentry/node";
 
 const app = fastify();
 
-setupFastifyErrorHandler(app);
+// setupFastifyErrorHandler(app);
 
 app.get("/test-trace", (request, reply) => {
   reply.send(

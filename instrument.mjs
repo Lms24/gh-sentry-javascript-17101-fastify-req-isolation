@@ -6,6 +6,7 @@ Sentry.init({
   debug: true,
   beforeSendTransaction: (txn) => {
     console.log("beforeSendTransaction", txn.contexts.trace);
+    return txn;
   },
   beforeSend: (event) => {
     console.log("beforeSend", event.contexts.trace);
